@@ -1,0 +1,266 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: #f8f9fc;
+  padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+  margin-left: 50px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.nav-menu ul li {
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-menu ul li:hover {
+  color: #d63384;
+}
+
+.chat-btn {
+  background: #d63384;
+  color: white;
+  padding: 10px 15px;
+  margin-right: 50px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.chat-btn:hover {
+  background: #b02a6e;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .chat-btn{
+margin-right: 10px;
+  }
+  .logo{
+margin-left: -50px;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 20px;
+    /* text-align: center; */
+  }
+
+  .nav-menu ul li {
+    margin-top: 2px;
+    margin-left: -12px;
+  }
+}
+
+/* Hero Section */
+.hero {
+  margin-top: 100px;
+  text-align: left;
+  padding-left: 10%;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.hero-text {
+  max-width: 45%;
+  text-align: left;
+}
+
+.hero-image img {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.welcome {
+  color: #6c757d;
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 32px;
+  color: #333;
+}
+
+.highlight {
+  color: #d63384;
+  font-weight: bold;
+}
+
+.description {
+  margin-top: 15px;
+  color: #555;
+  font-size: 16px;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+}
+
+.buttons a {
+  color: white;
+  text-decoration: none;
+}
+
+.hire-btn,
+.cv-btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.hire-btn {
+  background: #d63384;
+  color: white;
+}
+
+.hire-btn:hover {
+  background: #0011ff;
+}
+
+.cv-btn {
+  background: blue;
+  color: white;
+}
+
+.cv-btn:hover {
+  background: #d63384;
+}
+
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #ff0080, hsl(298, 89%, 59%));
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    /* text-align: center; */
+    padding-left: 0;
+  }
+  .hero-image{
+    margin-right: 12%;
+
+  }
+  .hero-image img {
+    width: 200px;
+    margin-top: 20px;
+  }
+.social-icons{
+  margin-left: 5%;
+}
+  .buttons {
+  margin-left: 6%;
+
+    /* flex-direction: column;
+    align-items: center; */
+  }
+}

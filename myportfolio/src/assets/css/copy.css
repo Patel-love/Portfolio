@@ -1,0 +1,39 @@
+.footer {
+  text-align: center;
+  padding: 15px 10px;
+  background-color: #f8f9fa; /* Light background */
+  width: 100%;
+}
+
+.footer-line {
+  width: 90%;
+  margin: 10px auto 15px;
+  border-top: 3px solid #000; /* Dark line */
+}
+
+.footer-text {
+  font-size: 16px;
+  color: #555; /* Dark grey text */
+  word-wrap: break-word; /* Prevent text overflow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-text {
+    font-size: 14px;
+  }
+
+  .footer-line {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-text {
+    font-size: 12px;
+  }
+
+  .footer {
+    padding: 10px 5px;
+  }
+}
